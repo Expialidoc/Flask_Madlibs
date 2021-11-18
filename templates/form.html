@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Story Form</title>
+</head>
+<body>
+    <section class='container'>
+        <h1 class='title'>MadLibs</h1>
+        <h2> Your Story: {{title}}</h2>
+        <form action ="/story" >
+            {% for prompt in prompts %}
+            <p> {{prompt}}: <input name="{{ prompt }}"></p>
+            {% endfor %}
+            <input  name="picks" value="{{ story_id }}">
+            
+          <!-- <div id='place'><label for='place'>place:</label>
+                <input "text" name = "place" id='place' size='50' >
+            </div>
+            <div id='noun'><label for='noun'>noun:</label>
+                <input "text" name = "noun" id='noun' size='50' >
+            </div>
+            <div id='verb'><label for='verb'>verb:</label>
+                <input "text" name = "verb" id='verb' size='50' >
+            </div>
+            <div id='adjective'><label for='adjective'>adjective:</label>
+                <input "text" name = "adjective" id='adjective' size='50' >
+            </div>
+            <div id='plural_noun'><label for='plural_noun'>plural_noun:</label>
+                <input "text" name = "plural_noun" id='plural_noun' size='50' >
+            </div> -->
+        
+            <button>Submit!</button>
+        </form>
+    </section>
+</body>
+</html>
